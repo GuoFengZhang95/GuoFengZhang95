@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "git docs/.vuepress/deploy"
+    "deploy": "git deploy.sh"
   },
   "author": "",
   "license": "ISC",
