@@ -5,11 +5,18 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "git docs/.vuepress/deploy"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^7.0.4",
     "vuepress": "^1.9.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "deploy"
+    }
   }
 }

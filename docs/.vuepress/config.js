@@ -1,6 +1,7 @@
 module.exports = {
   title: "峰峰的笔记",
   description: "javascript vue web node",
+  base: '/blog',
   themeConfig: {
     nav: [
       { text: "指南", link: "/guide/one" },
