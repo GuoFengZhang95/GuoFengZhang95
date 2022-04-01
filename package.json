@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "sh ./deploy.sh",
+    "deploy": "node ./shell.js",
     "prepare": "husky install"
   },
   "author": "",
