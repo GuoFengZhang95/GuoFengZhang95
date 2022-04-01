@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "git deploy.sh"
+    "deploy": "sh ./deploy.sh",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "husky": "^7.0.4",
+    "shelljs": "^0.8.5",
     "vuepress": "^1.9.7"
   },
   "husky": {
