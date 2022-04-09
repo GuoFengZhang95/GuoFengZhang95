@@ -7,6 +7,7 @@ module.exports = {
       { text: '指南', link: '/guide/one' },
       { text: 'Javascript', link: '/javascript/' },
       { text: 'Vue', link: '/vue/' },
+      { text: 'Webpack', link: '/webpack/loader' },
       { text: 'Node', link: '/node/' },
       { text: '其他', link: '/other/linux' },
       { text: 'External', link: 'https://github.com/GuoFengZhang95' },
@@ -20,6 +21,14 @@ module.exports = {
           collapsable: true, // 可选的, 默认值是 true,
           sidebarDepth: 1, // 可选的, 默认值是 1
           children: ['/guide/one', '/guide/two'],
+        },
+      ],
+      '/webpack/': [
+        {
+          title: 'Webpack',
+          collapsable: true,
+          sidebarDepth: 1,
+          children: ['/webpack/loader'],
         },
       ],
       '/other/': [
