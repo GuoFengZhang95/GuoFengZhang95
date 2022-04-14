@@ -2,6 +2,9 @@ module.exports = {
   title: '峰峰的笔记',
   description: 'javascript vue web node',
   base: '/blog/',
+  head: [
+    ['link', { rel: 'shortcut icon', type: "image/x-icon", href: `./favicon.ico` }]
+  ],
   themeConfig: {
     // logo: '/blog/public/logo.jpg',
     nav: [
