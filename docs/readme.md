@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /public/logo.jpg
+heroImage: /logo.jpg
 heroText: 峰峰的笔记
 tagline: 大前端学习笔记
 actionText: 快速上手 →

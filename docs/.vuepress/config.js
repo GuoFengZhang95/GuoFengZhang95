@@ -3,6 +3,7 @@ module.exports = {
   description: 'javascript vue web node',
   base: '/blog/',
   themeConfig: {
+    // logo: '/blog/public/logo.jpg',
     nav: [
       { text: '指南', link: '/guide/one' },
       { text: 'Javascript', link: '/javascript/' },
