@@ -7,9 +7,9 @@ module.exports = {
       { text: '指南', link: '/guide/one' },
       { text: 'Javascript', link: '/javascript/' },
       { text: 'Vue', link: '/vue/' },
-      { text: 'Webpack', link: '/webpack/thread-loader' },
+      { text: 'Webpack', link: '/webpack/' },
       { text: 'Node', link: '/node/' },
-      { text: '其他', link: '/other/linux' },
+      { text: '其他', link: '/other/' },
       { text: 'External', link: 'https://github.com/GuoFengZhang95' },
     ],
     displayAllHeaders: true, // 默认值：false
@@ -23,10 +23,11 @@ module.exports = {
           children: ['/guide/one', '/guide/two'],
         },
       ],
+      '/vue/': [],
       '/webpack/': [
         {
           title: 'loader',
-          collapsable: true,
+          collapsable: false,
           sidebarDepth: 2,
           children: [
             '',
@@ -43,12 +44,13 @@ module.exports = {
           ]
         }
       ],
+      '/node/': [],
       '/other/': [
         {
           title: '其他',
           collapsable: false,
           sidebarDepth: 1,
-          children: ['/other/linux', '/other/ecs'],
+          children: ['', '/other/linux', '/other/ecs'],
         },
       ],
     },
