@@ -30,11 +30,16 @@ module.exports = {
       '/vue/': [],
       '/webpack/': [
         {
+          title: '介绍',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: ['']
+        },
+        {
           title: 'loader',
           collapsable: false,
-          sidebarDepth: 2,
+          sidebarDepth: 1,
           children: [
-            '',
             'thread-loader',
             'style-resources-loader',
           ]
@@ -45,6 +50,14 @@ module.exports = {
           sidebarDepth: 1,
           children: [
             'optimization',
+          ]
+        },
+        {
+          title: '其他',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: [
+            'other',
           ]
         }
       ],
