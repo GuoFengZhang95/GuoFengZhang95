@@ -13,7 +13,7 @@ module.exports = {
       { text: 'Vue', link: '/vue/' },
       { text: 'Webpack', link: '/webpack/' },
       { text: 'Node', link: '/node/' },
-      { text: '其他', link: '/other/' },
+      { text: '其他', link: '/other/git' },
       { text: 'External', link: 'https://github.com/GuoFengZhang95' },
     ],
     displayAllHeaders: true, // 默认值：false
@@ -67,7 +67,7 @@ module.exports = {
           title: '其他',
           collapsable: false,
           sidebarDepth: 1,
-          children: ['', '/other/linux', '/other/ecs'],
+          children: ['/other/git', '/other/linux', '/other/ecs'],
         },
       ],
     },
