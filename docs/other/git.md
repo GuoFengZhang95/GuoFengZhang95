@@ -59,3 +59,31 @@ let d = 1//工作区
 <img :src="$withBase('/images/git009.png')" alt="git009">
 
 ### git revert
+`git revert`也有回退代码的功能，与`git reset`不同的是，`git revert`
+
+如下图所示，针对`revert.js`文件有三次提交
+
+<img :src="$withBase('/images/git010.png')" alt="git010">
+
+```js
+let a = 1//第一次commit
+let b = 1//第二次commit
+let c = 1//第三次commit
+```
+
+1. 回退1次提交，只保留这个提交之前的内容`git revert 015a78b67294b4f989534abdc712af163a7f1d6a`，此时产生了一个新的提交覆盖原来的内容，
+
+<img :src="$withBase('/images/git011.png')" alt="git011">
+
+```js
+let a = 1
+let b = 1
+```
+
+此时再次回退3个提交，`git revert daf9418b60c8a0f44d4cdc49d315b127d8c0e443`,
+
+<img :src="$withBase('/images/git011.png')" alt="git011">
+
+```js
+let a = 1
+```
