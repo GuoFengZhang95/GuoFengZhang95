@@ -31,3 +31,31 @@
 
 - `git merge`命令能够在合并的目标分支上保留提交记录
 - `git merge --squash`命令可以让主分支的`commit`数量减少，能够更清楚地看出主分支上迭代了那些功能
+
+### git reset
+`git reset`命令用于重置代码，一共有四个参数：`--soft`，`--mixed`（默认值），`--hard`，`--merge`。
+
+重点关注一下`git reset --hard`：重置到某个`commit`后，这个`commit`之后工作区、暂存区、本地仓库所有的改动都会重置
+
+如下图所示:
+
+<img :src="$withBase('/images/git006.png')" alt="git006">
+
+```js
+let a = 1//远程仓库
+let b = 1//本地仓库
+let c = 1//暂存区
+let d = 1//工作区
+```
+
+执行 `git reset f4eaf51fe5be5de981cbf1ed28f6ba7b25167b88 --hard` 重置到线上最新的`commit`。此时可以发现工作区、暂存区、本次仓库的改动都重置了
+
+<img :src="$withBase('/images/git007.png')" alt="git007">
+
+如果我们重置到线上最新提交的前一个`commit`，这时必须执行`git push --force`
+
+<img :src="$withBase('/images/git008.png')" alt="git008">
+
+<img :src="$withBase('/images/git009.png')" alt="git009">
+
+### git revert
