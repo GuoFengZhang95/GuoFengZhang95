@@ -10,7 +10,7 @@
 - 存储上限为5Mb
 ```js
 // Error=> DOMException: Failed to execute 'setItem' on 'Storage': Setting the value of 'maxStorage' exceeded the quota.
-testMaxLocalStorage() {
+testLocalStorageLimit() {
   let data = ''
   for (let i = 0; i < 1024 * 1024 * 1; i++) {
     data += 'a'
@@ -21,7 +21,7 @@ testMaxLocalStorage() {
 - 性能。测试连续存取1Mb数据1000次耗时至少需要4s
 ```js
 // testTimeConsume: 4093.830322265625 ms
-testTimeConsume() {
+testLocalStorageTimeConsume() {
   let data = ''
   for (let i = 0; i < 1024 * 1024; i++) {
     data += 'b'
