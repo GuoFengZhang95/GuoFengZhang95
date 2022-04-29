@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo.jpg
-heroText: 峰峰的笔记
+heroText: fengfengbook
 tagline: 大前端学习笔记
 actionText: 快速上手 →
 actionLink: /guide/one

@@ -1,5 +1,5 @@
 module.exports = {
-  title: '峰峰的笔记',
+  title: 'fengfengbook',
   description: 'javascript vue web node',
   base: '/blog/',
   head: [
@@ -25,6 +25,25 @@ module.exports = {
           collapsable: false, // 可选的, 默认值是 true,
           sidebarDepth: 1, // 可选的, 默认值是 1
           children: ['/guide/one', '/guide/two'],
+        },
+      ],
+      '/javascript/': [
+        {
+          title: '浏览器',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: [
+            'browser-storage',
+          ]
+        },
+      ],
+      '/node/': [],
+      '/other/': [
+        {
+          title: '其他',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: ['/other/git', '/other/linux', '/other/ecs'],
         },
       ],
       '/vue/': [],
@@ -60,15 +79,6 @@ module.exports = {
             'other',
           ]
         }
-      ],
-      '/node/': [],
-      '/other/': [
-        {
-          title: '其他',
-          collapsable: false,
-          sidebarDepth: 1,
-          children: ['/other/git', '/other/linux', '/other/ecs'],
-        },
       ],
     },
   },
