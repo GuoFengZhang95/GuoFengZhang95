@@ -18,7 +18,7 @@ testLocalStorageLimit() {
   localStorage.setItem('testMaxLocalStorage', data)
 },
 ```
-- 性能。测试连续存取1Mb数据1000次耗时至少需要4s
+- 性能。测试连续存取1Mb数据1000次耗时至少需要4s。不难发现，存取是同步操作，影响主页面渲染。
 ```js
 // testTimeConsume: 4093.830322265625 ms
 testLocalStorageTimeConsume() {
@@ -35,3 +35,4 @@ testLocalStorageTimeConsume() {
 },
 ```
 ## indexDB
+### <a href="https://www.ruanyifeng.com/blog/2018/07/indexeddb.html">相关文档</a>
