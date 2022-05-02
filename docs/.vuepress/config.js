@@ -36,6 +36,14 @@ module.exports = {
             'browser-storage',
           ]
         },
+        {
+          title: 'window',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: [
+            'requestAnimationsFrame',
+          ]
+        },
       ],
       '/node/': [],
       '/other/': [
@@ -43,7 +51,7 @@ module.exports = {
           title: '其他',
           collapsable: false,
           sidebarDepth: 1,
-          children: ['/other/git', '/other/linux', '/other/ecs'],
+          children: ['/other/git', '/other/linux', '/other/ecs', '/other/wx'],
         },
       ],
       '/vue/': [],
