@@ -45,15 +45,6 @@ module.exports = {
           ]
         },
       ],
-      '/node/': [],
-      '/other/': [
-        {
-          title: '其他',
-          collapsable: false,
-          sidebarDepth: 1,
-          children: ['/other/git', '/other/linux', '/other/ecs', '/other/wx'],
-        },
-      ],
       '/vue/': [],
       '/webpack/': [
         {
@@ -88,6 +79,23 @@ module.exports = {
           ]
         }
       ],
+      '/node/': [
+        {
+          title: '介绍',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: ['/node/file-processing']
+        },
+      ],
+      '/other/': [
+        {
+          title: '其他',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: ['/other/git', '/other/linux', '/other/ecs', '/other/wx'],
+        },
+      ],
+
     },
   },
 }
