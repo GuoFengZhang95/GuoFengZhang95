@@ -24,7 +24,7 @@ module.exports = {
           title: '指南', // 必要的
           collapsable: false, // 可选的, 默认值是 true,
           sidebarDepth: 1, // 可选的, 默认值是 1
-          children: ['/guide/one', '/guide/two'],
+          children: ['/guide/one',],
         },
       ],
       '/javascript/': [
@@ -42,6 +42,14 @@ module.exports = {
           sidebarDepth: 1,
           children: [
             'requestAnimationsFrame',
+          ]
+        },
+        {
+          title: '防抖与节流',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: [
+            'debounce-throttle',
           ]
         },
       ],
