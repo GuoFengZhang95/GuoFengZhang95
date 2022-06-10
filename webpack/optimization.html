@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>optimization | fengfengbook</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <meta name="description" content="javascript vue web node">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.40cc9dbd.js" as="script"><link rel="preload" href="/blog/assets/js/2.be29eef1.js" as="script"><link rel="preload" href="/blog/assets/js/23.209eded2.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.b0251b14.js"><link rel="prefetch" href="/blog/assets/js/11.12a4a570.js"><link rel="prefetch" href="/blog/assets/js/12.6a99cb89.js"><link rel="prefetch" href="/blog/assets/js/13.5e8417fa.js"><link rel="prefetch" href="/blog/assets/js/14.47add32c.js"><link rel="prefetch" href="/blog/assets/js/15.e12d309a.js"><link rel="prefetch" href="/blog/assets/js/16.96a6380b.js"><link rel="prefetch" href="/blog/assets/js/17.11ee506d.js"><link rel="prefetch" href="/blog/assets/js/18.53f77f7a.js"><link rel="prefetch" href="/blog/assets/js/19.da6e67e0.js"><link rel="prefetch" href="/blog/assets/js/20.523897d3.js"><link rel="prefetch" href="/blog/assets/js/21.834b2247.js"><link rel="prefetch" href="/blog/assets/js/22.f164486d.js"><link rel="prefetch" href="/blog/assets/js/24.da738ed1.js"><link rel="prefetch" href="/blog/assets/js/25.bce2e8cf.js"><link rel="prefetch" href="/blog/assets/js/26.bc70c126.js"><link rel="prefetch" href="/blog/assets/js/27.7c3124cd.js"><link rel="prefetch" href="/blog/assets/js/28.0d27e418.js"><link rel="prefetch" href="/blog/assets/js/3.7f9388a7.js"><link rel="prefetch" href="/blog/assets/js/4.b7d0708f.js"><link rel="prefetch" href="/blog/assets/js/5.9e2f4ca7.js"><link rel="prefetch" href="/blog/assets/js/6.c7b54f12.js"><link rel="prefetch" href="/blog/assets/js/7.0fb28f96.js"><link rel="prefetch" href="/blog/assets/js/8.33937bcd.js"><link rel="prefetch" href="/blog/assets/js/9.75520e51.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">fengfengbook</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/guide/one.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/blog/javascript/" class="nav-link">
+  Javascript
+</a></div><div class="nav-item"><a href="/blog/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/blog/webpack/" class="nav-link router-link-active">
+  Webpack
+</a></div><div class="nav-item"><a href="/blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/blog/other/git.html" class="nav-link">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/GuoFengZhang95" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/guide/one.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/blog/javascript/" class="nav-link">
+  Javascript
+</a></div><div class="nav-item"><a href="/blog/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/blog/webpack/" class="nav-link router-link-active">
+  Webpack
+</a></div><div class="nav-item"><a href="/blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/blog/other/git.html" class="nav-link">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/GuoFengZhang95" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>介绍</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/webpack/" aria-current="page" class="sidebar-link">webpack</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>loader</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/webpack/thread-loader.html" class="sidebar-link">thread-loader</a></li><li><a href="/blog/webpack/style-resources-loader.html" class="sidebar-link">style-resources-loader</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Plugin</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/webpack/vue-mixin-check.html" class="sidebar-link">vue-mixin-check</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>配置</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/webpack/optimization.html" aria-current="page" class="active sidebar-link">optimization</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/webpack/optimization.html#chunkids-moduleids" class="sidebar-link">chunkIds（moduleIds）</a></li><li class="sidebar-sub-header"><a href="/blog/webpack/optimization.html#concatenatemodules" class="sidebar-link">concatenateModules</a></li><li class="sidebar-sub-header"><a href="/blog/webpack/optimization.html#removeavailablemodules" class="sidebar-link">removeAvailableModules</a></li><li class="sidebar-sub-header"><a href="/blog/webpack/optimization.html#runtimechunk" class="sidebar-link">runtimeChunk</a></li><li class="sidebar-sub-header"><a href="/blog/webpack/optimization.html#sideeffects" class="sidebar-link">sideEffects</a></li><li class="sidebar-sub-header"><a href="/blog/webpack/optimization.html#splitchunks" class="sidebar-link">splitChunks</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/webpack/other.html" class="sidebar-link">Api</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/webpack/other.html#checkavailableport" class="sidebar-link">checkAvailablePort</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="optimization"><a href="#optimization" class="header-anchor">#</a> optimization</h1> <p>optimization 是webpack中非常重要的一个属性。通常情况下webpack的默认配置不能适用所有的项目。我们需要了解该配置下的一些重要属性，针对不同项目做出优化。</p> <h2 id="chunkids-moduleids"><a href="#chunkids-moduleids" class="header-anchor">#</a> chunkIds（moduleIds）</h2> <p>根据官方文档可知，推荐使用下述两值。</p> <ul><li><p>开发模式下默认使用 <code>named</code>便于调试。
+<img src="/blog/images/webpack_config_chunkIds_1.png" alt="webpack_config_chunkIds"></p></li> <li><p>生产模式下默认使用<code>deterministic</code>利于缓存。
+<img src="/blog/images/webpack_config_chunkIds_2.png" alt="webpack_config_chunkIds"></p></li></ul> <h2 id="concatenatemodules"><a href="#concatenatemodules" class="header-anchor">#</a> concatenateModules</h2> <p>让webpack找到模块之间的依赖联系，把模块合并的同一个函数中，缩小代码体积。</p> <p>函数关系如下：</p> <img src="/blog/images/concatenateModules.png" alt="concatenateModules"> <p>开启<code>concatenateModules</code></p> <img src="/blog/images/concatenateModules_true.png" alt="concatenateModules"> <p>关闭<code>concatenateModules</code></p> <img src="/blog/images/concatenateModules_false.png" alt="concatenateModules"> <h2 id="removeavailablemodules"><a href="#removeavailablemodules" class="header-anchor">#</a> removeAvailableModules</h2> <p>改配置会降低webpack性能，在后续正式版本会默认关闭。</p> <h2 id="runtimechunk"><a href="#runtimechunk" class="header-anchor">#</a> runtimeChunk</h2> <p>把运行时的代码提取出来生成一个公共的文件。但是任何一个运行时改动都会导致这个共文件hash闭环，导致缓存失效，所以建议关闭。</p> <h2 id="sideeffects"><a href="#sideeffects" class="header-anchor">#</a> sideEffects</h2> <p>待定</p> <h2 id="splitchunks"><a href="#splitchunks" class="header-anchor">#</a> splitChunks</h2> <p>配置webpack如何执行拆包策略。</p> <h3 id="chunks"><a href="#chunks" class="header-anchor">#</a> chunks</h3> <p>决定那些包会被拆分优化。</p> <ol><li>设置为<code>initial</code>：</li></ol> <ul><li>在入口文件<code>index.js</code>中引入<code>lodash</code>，<code>lodash</code>被拆分。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// index.js</span>
+<span class="token keyword">import</span> _ <span class="token keyword">from</span> <span class="token string">'lodash'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span>
+</code></pre></div><img src="/blog/images/splitChunks_1.png" alt="splitChunks_1"> <ul><li>在<code>index.js</code>中同步引入<code>data1.js</code>，<code>main.js</code>体积增加，<code>data1.js</code>未被拆分。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// index.js</span>
+<span class="token keyword">import</span> _ <span class="token keyword">from</span> <span class="token string">'lodash'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span>
+<span class="token keyword">import</span> data1 <span class="token keyword">from</span> <span class="token string">&quot;./data1&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data1<span class="token punctuation">)</span>
+</code></pre></div><img src="/blog/images/splitChunks_2.png" alt="splitChunks_2"> <ul><li>在<code>index.js</code>中异步引入<code>data1.js</code>。可以看出<code>data1.js</code>中的数据被拆分。因为是异步引入，所以在解析<code>data1.js</code>时，作为新的入口文件进行拆分。</li></ul> <img src="/blog/images/splitChunks_3.png" alt="splitChunks_3"> <ul><li>在<code>index.js</code>中异步引入<code>a.js</code>和<code>b.js</code>,<code>a.js</code>和<code>b.js</code>分别同步引入<code>data1.js</code>。可以看出拆出了两个文件<code>src_a_js.js</code>和<code>src_b_js.js</code>,这两个文件均包含<code>data1.js</code>的数据，出现了重复代码。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// index.js</span>
+<span class="token keyword">import</span> _ <span class="token keyword">from</span> <span class="token string">'lodash'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./a.js'</span><span class="token punctuation">)</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./b.js'</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// a.js b.js</span>
+<span class="token keyword">import</span> data1 <span class="token keyword">from</span> <span class="token string">&quot;./data1&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data1<span class="token punctuation">)</span>
+</code></pre></div><img src="/blog/images/splitChunks_4.png" alt="splitChunks_4"> <ol start="2"><li>设置为<code>async</code>可以看到，<code>lodash</code>未被拆分，<code>data1.js</code>从两个异步引入的文件中被拆分。</li></ol> <img src="/blog/images/splitChunks_5.png" alt="splitChunks_5"> <ol start="3"><li>设置为<code>all</code>。可以看到<code>loadsh</code>被拆分，<code>data1.js</code>从两个异步引入的文件中被拆分。</li></ol> <img src="/blog/images/splitChunks_6.png" alt="splitChunks_6"> <ol start="4"><li>总结：</li></ol> <ul><li><code>initial</code> 可以把入口文件中的node_modules代码提取出来，不能提取直接引入入口文件中的js。可以减少vendor文件的大小，但是会出现重复的代码。</li> <li><code>async</code> 可以把所有异步的代码提取出来。</li> <li><code>all</code> 同时具备initial和async的特性。</li> <li>通常使用<code>all</code>会有更好的拆分效果</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/webpack/vue-mixin-check.html" class="prev">
+        vue-mixin-check
+      </a></span> <span class="next"><a href="/blog/webpack/other.html">
+        Api
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.40cc9dbd.js" defer></script><script src="/blog/assets/js/2.be29eef1.js" defer></script><script src="/blog/assets/js/23.209eded2.js" defer></script>
+  </body>
+</html>

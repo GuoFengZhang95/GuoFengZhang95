@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>debounce &amp; throttle | fengfengbook</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <meta name="description" content="javascript vue web node">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.40cc9dbd.js" as="script"><link rel="preload" href="/blog/assets/js/2.be29eef1.js" as="script"><link rel="preload" href="/blog/assets/js/10.b0251b14.js" as="script"><link rel="prefetch" href="/blog/assets/js/11.12a4a570.js"><link rel="prefetch" href="/blog/assets/js/12.6a99cb89.js"><link rel="prefetch" href="/blog/assets/js/13.5e8417fa.js"><link rel="prefetch" href="/blog/assets/js/14.47add32c.js"><link rel="prefetch" href="/blog/assets/js/15.e12d309a.js"><link rel="prefetch" href="/blog/assets/js/16.96a6380b.js"><link rel="prefetch" href="/blog/assets/js/17.11ee506d.js"><link rel="prefetch" href="/blog/assets/js/18.53f77f7a.js"><link rel="prefetch" href="/blog/assets/js/19.da6e67e0.js"><link rel="prefetch" href="/blog/assets/js/20.523897d3.js"><link rel="prefetch" href="/blog/assets/js/21.834b2247.js"><link rel="prefetch" href="/blog/assets/js/22.f164486d.js"><link rel="prefetch" href="/blog/assets/js/23.209eded2.js"><link rel="prefetch" href="/blog/assets/js/24.da738ed1.js"><link rel="prefetch" href="/blog/assets/js/25.bce2e8cf.js"><link rel="prefetch" href="/blog/assets/js/26.bc70c126.js"><link rel="prefetch" href="/blog/assets/js/27.7c3124cd.js"><link rel="prefetch" href="/blog/assets/js/28.0d27e418.js"><link rel="prefetch" href="/blog/assets/js/3.7f9388a7.js"><link rel="prefetch" href="/blog/assets/js/4.b7d0708f.js"><link rel="prefetch" href="/blog/assets/js/5.9e2f4ca7.js"><link rel="prefetch" href="/blog/assets/js/6.c7b54f12.js"><link rel="prefetch" href="/blog/assets/js/7.0fb28f96.js"><link rel="prefetch" href="/blog/assets/js/8.33937bcd.js"><link rel="prefetch" href="/blog/assets/js/9.75520e51.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">fengfengbook</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/guide/one.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/blog/javascript/" class="nav-link router-link-active">
+  Javascript
+</a></div><div class="nav-item"><a href="/blog/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/blog/webpack/" class="nav-link">
+  Webpack
+</a></div><div class="nav-item"><a href="/blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/blog/other/git.html" class="nav-link">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/GuoFengZhang95" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/guide/one.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/blog/javascript/" class="nav-link router-link-active">
+  Javascript
+</a></div><div class="nav-item"><a href="/blog/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/blog/webpack/" class="nav-link">
+  Webpack
+</a></div><div class="nav-item"><a href="/blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/blog/other/git.html" class="nav-link">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/GuoFengZhang95" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>浏览器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/javascript/browser-storage.html" class="sidebar-link">browser storage</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/javascript/browser-storage.html#localstorage" class="sidebar-link">localStorage</a></li><li class="sidebar-sub-header"><a href="/blog/javascript/browser-storage.html#indexdb" class="sidebar-link">indexDB</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>window</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/javascript/requestAnimationsFrame.html" class="sidebar-link">requestAnimationsFrame</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/javascript/requestAnimationsFrame.html#含义" class="sidebar-link">含义</a></li><li class="sidebar-sub-header"><a href="/blog/javascript/requestAnimationsFrame.html#使用" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/blog/javascript/requestAnimationsFrame.html#参数" class="sidebar-link">参数</a></li><li class="sidebar-sub-header"><a href="/blog/javascript/requestAnimationsFrame.html#返回值" class="sidebar-link">返回值</a></li><li class="sidebar-sub-header"><a href="/blog/javascript/requestAnimationsFrame.html#兼容性" class="sidebar-link">兼容性</a></li><li class="sidebar-sub-header"><a href="/blog/javascript/requestAnimationsFrame.html#案例" class="sidebar-link">案例</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>防抖与节流</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/javascript/debounce-throttle.html" aria-current="page" class="active sidebar-link">debounce &amp; throttle</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/javascript/debounce-throttle.html#debounce" class="sidebar-link">debounce</a></li><li class="sidebar-sub-header"><a href="/blog/javascript/debounce-throttle.html#throttle" class="sidebar-link">throttle</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="debounce-throttle"><a href="#debounce-throttle" class="header-anchor">#</a> debounce &amp; throttle</h1> <p>防抖与节流主要应用了闭包和定时器</p> <h2 id="debounce"><a href="#debounce" class="header-anchor">#</a> debounce</h2> <p>当js一直触发某个函数，且每次触发函数的间隔小于设定阈值，函数防抖只会执行最后一次。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// timer是debounce的私有变量</span>
+  <span class="token keyword">let</span> timer
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> context <span class="token operator">=</span> <span class="token keyword">this</span>
+    <span class="token keyword">const</span> args <span class="token operator">=</span> arguments
+    <span class="token comment">// 每次点击清楚上一次记录的定时器id</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 生成新的定时器</span>
+    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// ========== 使用 ==========</span>
+<span class="token keyword">function</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'参数'</span><span class="token punctuation">,</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> debounceHandle <span class="token operator">=</span> <span class="token function">debounce</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">debounceHandle</span><span class="token punctuation">(</span><span class="token string">'入参'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  btn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> click<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="throttle"><a href="#throttle" class="header-anchor">#</a> throttle</h2> <p>当js一直触发某个函数，且每次触发函数的间隔小于设定阈值，函数节流可以实现每隔设定阈值的时间执行一次函数</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">throttle</span> <span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token keyword">let</span> lastTime<span class="token punctuation">,</span> timer
+ <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> context <span class="token operator">=</span> <span class="token keyword">this</span>
+    <span class="token keyword">const</span> args <span class="token operator">=</span> arguments
+    <span class="token keyword">let</span> currentTime <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>lastTime <span class="token operator">&amp;&amp;</span> currentTime <span class="token operator">&lt;</span> lastTime <span class="token operator">+</span> delay<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 函数触发时，间隔小于设定值，清除定时器，生成新的定时器</span>
+      <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+      timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        lastTime <span class="token operator">=</span> currentTime
+        <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 初始化或者函数触发时间隔不小于设定值 直接执行</span>
+      lastTime <span class="token operator">=</span> currentTime
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'move'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> throttleMove <span class="token operator">=</span> <span class="token function">throttle</span><span class="token punctuation">(</span>move<span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'mousemove'</span><span class="token punctuation">,</span> throttleMove<span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/javascript/requestAnimationsFrame.html" class="prev">
+        requestAnimationsFrame
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.40cc9dbd.js" defer></script><script src="/blog/assets/js/2.be29eef1.js" defer></script><script src="/blog/assets/js/10.b0251b14.js" defer></script>
+  </body>
+</html>
