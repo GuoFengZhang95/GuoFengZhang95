@@ -1,6 +1,6 @@
-## git
-### git merge
-#### --squash
+# git
+## git merge
+### --squash
 通常我们开发的时候会从主分支上拉取开发分支，开发完成后执行`git merge`命令把开发内容合并到主分支
 
 1. 新增开发分支`dev-v1.0.0`，并生成2次`commit`

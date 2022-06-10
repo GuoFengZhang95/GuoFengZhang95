@@ -71,6 +71,14 @@ module.exports = {
           ]
         },
         {
+          title: 'Plugin',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: [
+            'vue-mixin-check',
+          ]
+        },
+        {
           title: '配置',
           collapsable: false,
           sidebarDepth: 1,
@@ -100,7 +108,7 @@ module.exports = {
           title: '其他',
           collapsable: false,
           sidebarDepth: 1,
-          children: ['/other/git', '/other/linux', '/other/ecs', '/other/wx'],
+          children: ['/other/git', '/other/linux', '/other/ecs', '/other/wx', 'gulp'],
         },
       ],
 
